@@ -1,0 +1,15 @@
+package br.com.exercicios;
+
+import java.lang.reflect.Method;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		String nomeClasse = "br.com.exercicios.listaexercicios.Exercicio0".concat("1");
+		Class classe = Class.forName(nomeClasse);
+//		Method metodo = classe.getMethod("run", null);
+//		metodo.invoke(classe);
+	}
+	
+}

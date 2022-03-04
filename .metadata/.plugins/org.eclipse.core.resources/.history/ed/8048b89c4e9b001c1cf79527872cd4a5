@@ -1,0 +1,11 @@
+package br.com.exercicios;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		Class<?> classe = Class.forName("Exercicio01");
+		
+	}
+	
+}

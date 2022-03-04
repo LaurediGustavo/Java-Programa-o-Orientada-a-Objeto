@@ -1,0 +1,19 @@
+package br.com.exercicios;
+
+import java.lang.reflect.Method;
+
+import br.com.exercicios.inteface.Exercicio;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		String nomeClasse = "br.com.exercicios.listaexercicios.Exercicio0".concat("1");
+		Object classe = Class.forName(nomeClasse);
+		Exercicio exercicio = (Exercicio) classe;
+		exercicio.run();
+//		Method[] metodo = classe.getClass().getMethods();
+//		metodo[0].invoke(classe);
+	}
+	
+}

@@ -1,0 +1,23 @@
+package br.com.exercicios;
+
+import br.com.exercicios.inteface.Exercicio;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		Class<?> classe = Class.forName("Exercicio01");
+		
+	}
+	
+}
+
+class Exercicio02 implements Exercicio {
+
+	@Override
+	public void run() {
+		System.out.println("teste");
+	}
+	
+}
+

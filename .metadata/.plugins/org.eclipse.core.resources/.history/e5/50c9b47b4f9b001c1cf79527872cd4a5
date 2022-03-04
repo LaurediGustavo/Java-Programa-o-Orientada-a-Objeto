@@ -1,0 +1,20 @@
+package br.com.exercicios;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		Object classe = Class.forName("Exercicio02").cast("Exercicio");
+		
+	}
+	
+}
+
+class Exercicio02 {
+
+	public void run() {
+		System.out.println("teste");
+	}
+	
+}
+

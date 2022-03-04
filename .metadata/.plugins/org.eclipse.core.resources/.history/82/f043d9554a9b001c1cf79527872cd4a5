@@ -1,0 +1,5 @@
+package br.com.exercicios.inteface;
+
+public interface Exercicio {
+
+}
