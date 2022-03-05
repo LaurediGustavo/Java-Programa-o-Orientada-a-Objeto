@@ -15,7 +15,7 @@ public class Main {
 			String nomeClasse = "br.com.exercicios.listaexercicios.Exercicio".concat(numero);
 			Class<?> classe = Class.forName(nomeClasse);
 			Object exercicio = classe.newInstance();
-			Method metodo = exercicio.getClass().getMethod("run1", null);
+			Method metodo = exercicio.getClass().getMethod("run", null);
 			metodo.invoke(exercicio, null);
 		}
 		catch (ClassNotFoundException e) {
