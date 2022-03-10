@@ -37,7 +37,7 @@ public class Exercicio18 implements Exercicio {
 				int deze = Integer.parseInt(String.valueOf(valor.charAt(0)));
 				int unid = Integer.parseInt(String.valueOf(valor.charAt(1)));
 				
-				if(unid < 1) {
+				if(unid == 0) {
 					System.out.println(dezena[deze]);
 				}
 				else {
