@@ -41,13 +41,9 @@ public class Exercicio19 implements Exercicio {
 				int deze = Integer.parseInt(String.valueOf(valor.charAt(0)));
 				int unid = Integer.parseInt(String.valueOf(valor.charAt(1)));
 				
-				String j = "";
-				
-				j = unidadeIgualZero(unid, deze) + " reais";
-				
-				j += retornarValorDecimal(valor);
-				
-				System.out.println(j);
+				System.out.println(unidadeIgualZero(unid, deze) 
+						+ " reais"
+						+ retornarValorDecimal(valor));
 				
 			} 
 			else {
@@ -57,38 +53,33 @@ public class Exercicio19 implements Exercicio {
 	}
 	
 	private String retornarValorDecimal(String valor) {
-		String s;
+		String v = verificarValorDecimal(valor);
+		
+		if (Integer.parseInt(v) < 20) {
+			return " e " + unidade[Integer.parseInt(v)] + " centavos";
+		} else {
+			int dez = Integer.parseInt(String.valueOf(v.charAt(0)));
+			int uni = Integer.parseInt(String.valueOf(v.charAt(1)));
+
+			return " e " + unidadeIgualZero(uni, dez) + " centavos";
+		}
+	}
+	
+	private String verificarValorDecimal(String valor) {
 		if(valor.length() > 4) {
-			s = String.valueOf(valor.charAt(3)) + String.valueOf(valor.charAt(4));
+			return String.valueOf(valor.charAt(3)) + String.valueOf(valor.charAt(4));
 		}
 		else {
-			 s = String.valueOf(valor.charAt(2)) + String.valueOf(valor.charAt(3));
+			return String.valueOf(valor.charAt(2)) + String.valueOf(valor.charAt(3));
 		}
-
-		String retorno = "";
-		
-		if (Integer.parseInt(s) < 20) {
-			retorno = " e " + unidade[Integer.parseInt(s)] + " centavos";
-		} else {
-			int dez = Integer.parseInt(String.valueOf(s.charAt(0)));
-			int uni = Integer.parseInt(String.valueOf(s.charAt(1)));
-
-			retorno = " e " + unidadeIgualZero(uni, dez) + " centavos";
-		}
-
-		return retorno;
 	}
 	
 	private String unidadeIgualZero(int unidade, int dezeza) {
-		String retorno = "";
-		
 		if (unidade == 0) {
-			retorno += this.dezena[dezeza];
+			return this.dezena[dezeza];
 		} else {
-			retorno += this.dezena[dezeza] + " e " + this.unidade[unidade];
+			return this.dezena[dezeza] + " e " + this.unidade[unidade];
 		}
-		
-		return retorno;
 	}
 	
 	private int pegarUnidade(String valor) {
